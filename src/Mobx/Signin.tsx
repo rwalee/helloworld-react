@@ -10,7 +10,7 @@ import Link from '@material-ui/core/Link';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useStyles } from './styles';
 
@@ -30,6 +30,16 @@ function Copyright() {
 export default function SignIn(props: { setErr: any }) {
   const classes = useStyles();
   const history = useHistory();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (event: any) => {
+    console.log('You are submitting : ');
+    console.dir({ email });
+    console.dir({ password });
+    event.preventDefault();
+    // history.push('/signup');
+  };
 
   return (
     <Container component="main" maxWidth="xs">
@@ -52,6 +62,7 @@ export default function SignIn(props: { setErr: any }) {
             name="email"
             autoComplete="email"
             autoFocus
+            onChange={(event) => setEmail(event.target.value)}
           />
           <TextField
             variant="outlined"
@@ -63,6 +74,7 @@ export default function SignIn(props: { setErr: any }) {
             type="password"
             id="password"
             autoComplete="current-password"
+            onChange={(event) => setPassword(event.target.value)}
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
@@ -74,9 +86,7 @@ export default function SignIn(props: { setErr: any }) {
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={() => {
-              history.push('/signup');
-            }}
+            onClick={handleSubmit}
           >
             Sign In
           </Button>

@@ -17,7 +17,7 @@ export default function LoginModule() {
           <Route path="/signup">
             <SignUp />
           </Route>
-          <Route path="/loginMsg">
+          <Route path="/signMsg">
             <SignMsg err={err} />
           </Route>
           <Route path="/">
