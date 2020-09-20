@@ -8,6 +8,8 @@ export const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    opacity: 0.9,
+    padding: theme.spacing(2),
   },
   avatar: {
     margin: theme.spacing(1),
