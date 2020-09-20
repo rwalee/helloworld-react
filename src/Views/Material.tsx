@@ -53,7 +53,7 @@ export default function Material() {
           </Typography>
           <br />
           <Typography variant="h6" color="secondary">
-            Manage Media Launcher Admin System
+            Manage Your Admin System
           </Typography>
           {/* <Avatar className={classes.avatar}>
             <LockOutlinedIcon />
@@ -72,7 +72,7 @@ export default function Material() {
           </Button>
           <Box mt={4}>
             <Typography variant="body2" color="textSecondary" align="center">
-              Copyright © Samsung Electronics.
+              Copyright © Where are you from?
             </Typography>
             <br />
           </Box>
